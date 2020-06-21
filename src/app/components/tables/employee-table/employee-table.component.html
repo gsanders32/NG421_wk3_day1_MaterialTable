@@ -51,7 +51,7 @@
     <!-- Salary Column -->
     <ng-container matColumnDef="salary">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Salary </th>
-        <td mat-cell *matCellDef="let element"> {{element.salary | currency}}</td>
+        <td mat-cell *matCellDef="let element" [style.color]="element.salary <= 50000 ? 'red' : 'green' "> {{element.salary | currency}}</td>
     </ng-container>
   
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
